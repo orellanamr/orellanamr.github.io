@@ -99,10 +99,9 @@ nav{
 .nav-logo{
    position: relative;
 }
-.nav-name{
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--text-color-third);
+.nav-logo-img{
+    width: 150px; /* Ajusta el tamaño a tus necesidades */
+    height: auto;
 }
 .nav-logo span{
     position: absolute;
