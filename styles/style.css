@@ -212,6 +212,7 @@ nav{
     gap: 30px;
 }
 .icon{
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
