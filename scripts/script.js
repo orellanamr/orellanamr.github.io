@@ -108,3 +108,23 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+function sendEmail() {
+  var templateParams = {
+    from_name: document.getElementById("name").value,
+    from_email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+    to_name: "Your Name or Recipient",
+  };
+
+  emailjs.send("service_zy3gctj", "template_y555dpm", templateParams).then(
+    function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+      alert("Message sent successfully!");
+    },
+    function (error) {
+      console.log("FAILED...", error);
+      alert("Something went wrong. Please try again.");
+    }
+  );
+}
