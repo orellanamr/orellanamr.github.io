@@ -1,16 +1,50 @@
-## Hi there 👋
+# Portfolio Website
 
-<!--
-**orellanamr/orellanamr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Overview
 
-Here are some ideas to get you started:
+This repository contains the code for my personal portfolio website. The website showcases my skills, experience, and projects as a React Developer.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Features
+
+- **Dynamic Web Applications**: Built with React.js to provide a smooth and interactive user experience.
+- **Responsive Design**: Ensures compatibility across various devices and screen sizes.
+- **Contact Form**: Allows users to contact me directly via email.
+
+## Technologies
+
+- **Frontend**: React.js, HTML, CSS, JavaScript
+- **Tools**: Git, GitHub, EmailJS
+
+## Setup Instructions
+
+To run this project locally, follow these steps:
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/orellanamr/your-repo.git
+
+   ```
+
+2. **Navigate to the Project Directory**
+
+   ```bash
+   git clone https://github.com/orellanamr/your-repo.git
+
+   ```
+
+3. **Install Dependencies**
+
+   ```bash
+   yarn install
+
+   ```
+
+4. **Start the Development Server**
+   ```bash
+   yarn start
+   ```
+
+## **Contact**
+
+If you have any questions or feedback, feel free to reach out to me via email at orellana.marketing@gmail.com.

@@ -109,6 +109,8 @@ function scrollActive() {
 
 window.addEventListener("scroll", scrollActive);
 
+/* ----- SEND EMAIL ----- */
+
 function sendEmail() {
   var templateParams = {
     from_name: document.getElementById("name").value,
