@@ -10,7 +10,8 @@ const resources = {
       projects: "Projects",
       contact: "Contact",
       download_cv: "Download CV",
-      welcome: "Welcome to my portfolio!",
+      all_rights_reserved: "All rights reserved",
+      contact_info: "Contact",
       hero: {
         name: "Rolando Orellana",
         title: {
@@ -39,7 +40,8 @@ const resources = {
       projects: "Proyectos",
       contact: "Contacto",
       download_cv: "Descargar CV",
-      welcome: "¡Bienvenido a mi portafolio!",
+      all_rights_reserved: "Todos los derechos reservados",
+      contact_info: "Contacto",
       hero: {
         name: "Rolando Orellana",
         title: {

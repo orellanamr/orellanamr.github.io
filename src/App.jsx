@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Projects from "./components/Projects";
-import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <Navbar />
       <HeroSection />
       <Projects />
-      <Home />
+      <Footer />
     </div>
   );
 };
