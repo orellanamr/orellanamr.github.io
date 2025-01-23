@@ -1,60 +1,111 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Menu,
+  MenuItem,
+  Button,
+  Box,
+  useMediaQuery,
+} from "@mui/material";
+import {
+  Menu as MenuIcon,
+  Language as LanguageIcon,
+} from "@mui/icons-material";
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
+import logoRolando from "../assets/images/logoRolando.svg";
+import RolandoCV from "../assets/docs/Rolando_Orellana_CV.pdf";
 import { useTranslation } from "react-i18next";
-import "./Navbar.css";
+import { useTheme } from "@mui/material/styles";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuAnchor, setMenuAnchor] = useState(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // Detecta pantallas pequeñas
+
+  const handleMenuOpen = (event) => {
+    setMenuAnchor(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setMenuAnchor(null);
+  };
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "es" : "en";
     i18n.changeLanguage(newLang);
   };
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
-    <header className="navbar">
-      <div className="navbar-logo">
-        <img src="/path/to/logo.png" alt="Logo" />
-        <span>Rolando</span>
-      </div>
+    <AppBar position="static" color="transparent" elevation={0} sx={{ px: 2 }}>
+      <Toolbar>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: "flex",
+            alignItems: "center",
+            cursor: "pointer",
+          }}
+        >
+          <img src={logoRolando} alt="Logo" style={{ height: 40 }} />
+        </Box>
 
-      <button className="hamburger-button" onClick={toggleMenu}>
-        <span className="hamburger-icon"></span>
-      </button>
-
-      <nav className={`navbar-links ${menuOpen ? "open" : ""}`}>
-        <a href="#home" onClick={() => setMenuOpen(false)}>
-          {t("home")}
-        </a>
-        <a href="#about" onClick={() => setMenuOpen(false)}>
-          {t("about")}
-        </a>
-        <a href="#projects" onClick={() => setMenuOpen(false)}>
-          {t("projects")}
-        </a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>
-          {t("contact")}
-        </a>
-      </nav>
-
-      <div className="navbar-actions">
-        <button className="language-toggle" onClick={toggleLanguage}>
-          🌐 {i18n.language === "en" ? "EN" : "ES"}
-        </button>
-        <a href="/path/to/cv.pdf" download className="navbar-cv">
-          {t("download_cv")}{" "}
-          <span role="img" aria-label="icon">
-            📄
-          </span>
-        </a>
-      </div>
-    </header>
+        {!isMobile ? (
+          // Links para pantallas grandes
+          <Box sx={{ display: "flex", gap: 2 }}>
+            <Button color="inherit" sx={{ fontWeight: 600 }}>
+              {t("home")}
+            </Button>
+            <Button color="inherit" sx={{ fontWeight: 600 }}>
+              {t("about")}
+            </Button>
+            <Button color="inherit" sx={{ fontWeight: 600 }}>
+              {t("projects")}
+            </Button>
+            <Button color="inherit" sx={{ fontWeight: 600 }}>
+              {t("contact")}
+            </Button>
+            <IconButton color="inherit" onClick={toggleLanguage}>
+              <LanguageIcon />
+            </IconButton>
+            <Button
+              variant="contained"
+              color="primary"
+              startIcon={<DescriptionOutlinedIcon />}
+              href={RolandoCV}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ display: { xs: "none", sm: "inline-flex" } }}
+            >
+              {t("download_cv")}
+            </Button>
+          </Box>
+        ) : (
+          // Menú desplegable para pantallas pequeñas
+          <>
+            <IconButton edge="end" color="inherit" onClick={handleMenuOpen}>
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              anchorEl={menuAnchor}
+              open={Boolean(menuAnchor)}
+              onClose={handleMenuClose}
+            >
+              <MenuItem onClick={handleMenuClose}>{t("home")}</MenuItem>
+              <MenuItem onClick={handleMenuClose}>{t("about")}</MenuItem>
+              <MenuItem onClick={handleMenuClose}>{t("projects")}</MenuItem>
+              <MenuItem onClick={handleMenuClose}>{t("contact")}</MenuItem>
+              <MenuItem onClick={toggleLanguage}>
+                {i18n.language === "en" ? "Español" : "English"}
+              </MenuItem>
+            </Menu>
+          </>
+        )}
+      </Toolbar>
+    </AppBar>
   );
 };
 
 export default Navbar;
-s;
