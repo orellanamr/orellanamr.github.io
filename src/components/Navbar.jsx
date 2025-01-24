@@ -73,11 +73,20 @@ const Navbar = () => {
             <Button
               variant="contained"
               color="primary"
+              size="small"
               startIcon={<DescriptionOutlinedIcon />}
               href={RolandoCV}
               target="_blank"
               rel="noopener noreferrer"
-              sx={{ display: { xs: "none", sm: "inline-flex" } }}
+              sx={{
+                display: { xs: "none", sm: "inline-flex" },
+                backgroundColor: "#EFEFEF",
+                color: "#000000",
+                "&:hover": {
+                  backgroundColor: "primary.main",
+                  color: "#FFFFFF",
+                },
+              }}
             >
               {t("download_cv")}
             </Button>

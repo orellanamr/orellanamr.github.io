@@ -19,7 +19,7 @@ const resources = {
           designer: "Designer",
         },
         description:
-          "React Developer with 6+ years in digital design. Proficient in React, Redux, HTML, CSS, and JavaScript. Skilled in design systems, collaboration, and user-centric solutions.",
+          "React Developer with 6+ years of experience in design and digital marketing.",
         scrollDown: "Scroll Down",
       },
       Projects: "Projects",
@@ -49,7 +49,7 @@ const resources = {
           designer: "Diseñador",
         },
         description:
-          "Desarrollador React con más de 6 años de experiencia en diseño digital. Experto en React, Redux, HTML, CSS y JavaScript. Hábil en sistemas de diseño, colaboración y soluciones centradas en el usuario.",
+          "Desarrollador React con más de 6 años de experiencia en diseño y marketing digital.",
         scrollDown: "Deslizar hacia abajo",
       },
       Projects: "Proyectos",

@@ -22,7 +22,7 @@ const theme = createTheme({
   typography: {
     fontFamily: "Poppins, Arial, sans-serif",
     h1: {
-      fontSize: "50pt",
+      fontSize: "66pt",
       fontWeight: "Black",
       color: "#0F4C5C",
     },
