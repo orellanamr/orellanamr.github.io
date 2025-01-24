@@ -37,7 +37,7 @@ const HeroSection = () => {
         color="#00DA94"
         sx={{ fontWeight: "bold" }}
       >
-        + {t("hero.title.designer")}
+        {t("hero.title.designer")}
       </Typography>
 
       <Typography variant="body1" sx={{ maxWidth: 600, mb: 4 }}>
