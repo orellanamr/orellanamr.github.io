@@ -1,9 +1,27 @@
+import { useState, useEffect } from "react";
 import { Typography, Box, Button } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useTranslation } from "react-i18next";
+import ReactTypingEffect from "react-typing-effect";
 
 const HeroSection = () => {
+  const [showButton, setShowButton] = useState(true);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setShowButton(false);
+      } else {
+        setShowButton(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <Box
@@ -17,7 +35,7 @@ const HeroSection = () => {
         color: "text.primary",
         px: {
           xs: 2,
-          md: 32,
+          md: 50,
         },
       }}
     >
@@ -28,17 +46,43 @@ const HeroSection = () => {
         {t("hero.name").toUpperCase()}
       </Typography>
 
-      <Typography variant="h1" color="black" sx={{ fontWeight: "bold", mb: 1 }}>
-        {t("hero.title.developer")}{" "}
-      </Typography>
-      <Typography
-        component="span"
-        variant="h1"
-        color="#00DA94"
-        sx={{ fontWeight: "bold" }}
-      >
-        {t("hero.title.designer")}
-      </Typography>
+      <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+        <Typography
+          variant="h1"
+          color="black"
+          sx={{ fontWeight: "bold", mr: 2 }}
+        >
+          {t("hero.title.developer")}
+        </Typography>
+        <Box sx={{ borderBottom: "2px solid black", width: "100%" }} />
+      </Box>
+      <Box>
+        <Typography
+          component="span"
+          variant="h1"
+          color="#6E6E6E"
+          sx={{ fontWeight: "bold" }}
+        >
+          +
+        </Typography>
+        <Typography
+          component="span"
+          variant="h1"
+          color="#00DA94"
+          sx={{ fontWeight: "bold" }}
+        >
+          <ReactTypingEffect
+            text={[
+              t("hero.title.developer"),
+              t("hero.title.designer"),
+              "Dreamer",
+            ]}
+            speed={100}
+            eraseSpeed={80}
+            eraseDelay={2000}
+          />
+        </Typography>
+      </Box>
 
       <Typography variant="body1" sx={{ maxWidth: 600, mb: 4 }}>
         {t("hero.description")}
@@ -51,27 +95,32 @@ const HeroSection = () => {
           paddingTop: 16,
         }}
       >
-        <Button
-          variant="outlined"
-          color="primary"
-          size="small"
+        <Box
           sx={{
-            maxWidth: "200px",
-            borderRadius: "50px",
-            textTransform: "none",
-            px: 4,
+            opacity: showButton ? 1 : 0,
+            transition: "opacity 0.75s ease-in-out",
           }}
         >
-          <Box>{t("hero.scrollDown")}</Box>
-          <Box>
-            <ExpandMoreIcon
-              sx={{
-                ml: 1,
-                animation: "bounce 2s infinite",
-              }}
-            />
-          </Box>
-        </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            size="small"
+            sx={{
+              borderRadius: "50px",
+              px: 4,
+            }}
+          >
+            <Box></Box>
+            <Box>
+              <ExpandMoreIcon
+                sx={{
+                  ml: 1,
+                  animation: "bounce 2s infinite",
+                }}
+              />
+            </Box>
+          </Button>
+        </Box>
         <style>
           {`
           @keyframes bounce {
