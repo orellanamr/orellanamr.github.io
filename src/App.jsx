@@ -7,9 +7,15 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <HeroSection />
-      <Projects />
-      <Footer />
+      <div id="home">
+        <HeroSection />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Footer />
+      </div>
     </div>
   );
 };

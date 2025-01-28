@@ -41,7 +41,15 @@ const HeroSection = () => {
     >
       <Typography
         variant="h6"
-        sx={{ letterSpacing: 2, mb: 2, textAlign: "left" }}
+        sx={{
+          letterSpacing: 7,
+          mb: 2,
+          textAlign: "left",
+          fontSize: {
+            xs: "1rem",
+            md: "1.5rem",
+          },
+        }}
       >
         {t("hero.name").toUpperCase()}
       </Typography>
@@ -50,7 +58,14 @@ const HeroSection = () => {
         <Typography
           variant="h1"
           color="black"
-          sx={{ fontWeight: "bold", mr: 2 }}
+          sx={{
+            fontWeight: "bold",
+            mr: 2,
+            fontSize: {
+              xs: "3.5rem",
+              md: "5.5rem",
+            },
+          }}
         >
           {t("hero.title.developer")}
         </Typography>
@@ -61,7 +76,13 @@ const HeroSection = () => {
           component="span"
           variant="h1"
           color="#6E6E6E"
-          sx={{ fontWeight: "bold" }}
+          sx={{
+            fontWeight: "bold",
+            fontSize: {
+              xs: "3.5rem",
+              md: "5.5rem",
+            },
+          }}
         >
           +
         </Typography>
@@ -69,13 +90,19 @@ const HeroSection = () => {
           component="span"
           variant="h1"
           color="#00DA94"
-          sx={{ fontWeight: "bold" }}
+          sx={{
+            fontWeight: "bold",
+            fontSize: {
+              xs: "3.5rem",
+              md: "5.5rem",
+            },
+          }}
         >
           <ReactTypingEffect
             text={[
-              t("hero.title.developer"),
-              t("hero.title.designer"),
-              "Dreamer",
+              t("hero.title.innovative"),
+              t("hero.title.creative"),
+              t("hero.title.passionate"),
             ]}
             speed={100}
             eraseSpeed={80}
@@ -83,10 +110,20 @@ const HeroSection = () => {
           />
         </Typography>
       </Box>
-
-      <Typography variant="body1" sx={{ maxWidth: 600, mb: 4 }}>
-        {t("hero.description")}
-      </Typography>
+      <Box>
+        <Typography
+          variant="body1"
+          sx={{
+            mt: 4,
+            fontSize: {
+              xs: "1rem",
+              md: "1.25rem",
+            },
+          }}
+        >
+          {t("hero.description")}
+        </Typography>
+      </Box>
       <Box
         sx={{
           display: "flex",

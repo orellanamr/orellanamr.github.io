@@ -3,10 +3,11 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Menu,
   MenuItem,
   Button,
   Box,
+  Drawer,
+  Typography,
   useMediaQuery,
 } from "@mui/material";
 import {
@@ -21,16 +22,12 @@ import { useTheme } from "@mui/material/styles";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
-  const [menuAnchor, setMenuAnchor] = useState(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // Detecta pantallas pequeñas
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const handleMenuOpen = (event) => {
-    setMenuAnchor(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setMenuAnchor(null);
+  const toggleDrawer = (open) => {
+    setIsDrawerOpen(open);
   };
 
   const toggleLanguage = () => {
@@ -38,8 +35,21 @@ const Navbar = () => {
     i18n.changeLanguage(newLang);
   };
 
+  const handleScrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setIsDrawerOpen(false); // Cierra el menú móvil
+  };
+
   return (
-    <AppBar position="static" color="transparent" elevation={0} sx={{ px: 2 }}>
+    <AppBar
+      position="fixed"
+      color="transparent"
+      elevation={0}
+      sx={{ px: 2, zIndex: 1300, backgroundColor: "#FFFFFF" }}
+    >
       <Toolbar>
         <Box
           sx={{
@@ -53,18 +63,26 @@ const Navbar = () => {
         </Box>
 
         {!isMobile ? (
-          // Links para pantallas grandes
           <Box sx={{ display: "flex", gap: 2 }}>
-            <Button color="inherit" sx={{ fontWeight: 600 }}>
+            <Button
+              color="inherit"
+              sx={{ fontWeight: 600 }}
+              onClick={() => handleScrollToSection("home")}
+            >
               {t("home")}
             </Button>
-            <Button color="inherit" sx={{ fontWeight: 600 }}>
-              {t("about")}
-            </Button>
-            <Button color="inherit" sx={{ fontWeight: 600 }}>
+            <Button
+              color="inherit"
+              sx={{ fontWeight: 600 }}
+              onClick={() => handleScrollToSection("projects")}
+            >
               {t("projects")}
             </Button>
-            <Button color="inherit" sx={{ fontWeight: 600 }}>
+            <Button
+              color="inherit"
+              sx={{ fontWeight: 600 }}
+              onClick={() => handleScrollToSection("contact")}
+            >
               {t("contact")}
             </Button>
             <IconButton color="inherit" onClick={toggleLanguage}>
@@ -92,24 +110,89 @@ const Navbar = () => {
             </Button>
           </Box>
         ) : (
-          // Menú desplegable para pantallas pequeñas
           <>
-            <IconButton edge="end" color="inherit" onClick={handleMenuOpen}>
+            <IconButton
+              edge="end"
+              color="inherit"
+              onClick={() => toggleDrawer(true)}
+            >
               <MenuIcon />
             </IconButton>
-            <Menu
-              anchorEl={menuAnchor}
-              open={Boolean(menuAnchor)}
-              onClose={handleMenuClose}
+            <Drawer
+              anchor="left"
+              open={isDrawerOpen}
+              onClose={() => toggleDrawer(true)}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+              sx={{
+                "& .MuiDrawer-paper": {
+                  width: "100vw",
+                  height: "100vh",
+                  backgroundColor: theme.palette.background.default,
+                  justifyContent: "center",
+                  alignItems: "center",
+                },
+              }}
             >
-              <MenuItem onClick={handleMenuClose}>{t("home")}</MenuItem>
-              <MenuItem onClick={handleMenuClose}>{t("about")}</MenuItem>
-              <MenuItem onClick={handleMenuClose}>{t("projects")}</MenuItem>
-              <MenuItem onClick={handleMenuClose}>{t("contact")}</MenuItem>
-              <MenuItem onClick={toggleLanguage}>
-                {i18n.language === "en" ? "Español" : "English"}
-              </MenuItem>
-            </Menu>
+              <Box
+                sx={{
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 2,
+                }}
+              >
+                <MenuItem onClick={() => handleScrollToSection("home")}>
+                  <Typography variant="h6">{t("home")}</Typography>
+                </MenuItem>
+                <MenuItem onClick={() => handleScrollToSection("projects")}>
+                  <Typography variant="h6">{t("projects")}</Typography>
+                </MenuItem>
+                <MenuItem onClick={() => handleScrollToSection("contact")}>
+                  <Typography variant="h6">{t("contact")}</Typography>
+                </MenuItem>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: 5,
+                    py: 8,
+                  }}
+                >
+                  <Button
+                    color="inherit"
+                    size="small"
+                    onClick={toggleLanguage}
+                    sx={{ display: "flex", alignItems: "center" }}
+                  >
+                    <LanguageIcon sx={{ mr: 1 }} />
+                    {i18n.language === "en" ? "Español" : "English"}
+                  </Button>
+
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="small"
+                    startIcon={<DescriptionOutlinedIcon />}
+                    href={RolandoCV}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      backgroundColor: "#EFEFEF",
+                      color: "#000000",
+                      "&:hover": {
+                        backgroundColor: "primary.main",
+                        color: "#FFFFFF",
+                      },
+                    }}
+                  >
+                    {t("download_cv")}
+                  </Button>
+                </Box>
+              </Box>
+            </Drawer>
           </>
         )}
       </Toolbar>
