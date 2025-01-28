@@ -1,20 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Typography, Box, Button } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useTranslation } from "react-i18next";
 import ReactTypingEffect from "react-typing-effect";
+import GlitchVideo from "../assets/videos/glitch_small.mp4";
 
 const HeroSection = () => {
   const [showButton, setShowButton] = useState(true);
   const { t } = useTranslation();
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5;
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setShowButton(false);
-      } else {
-        setShowButton(true);
-      }
+      setShowButton(window.scrollY <= 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,28 +31,53 @@ const HeroSection = () => {
     <Box
       component="section"
       sx={{
+        position: "relative",
         display: "flex",
         flexDirection: "column",
-        textAlign: "left",
         justifyContent: "center",
         height: "100vh",
         color: "text.primary",
-        px: {
-          xs: 2,
-          md: 50,
-        },
+        px: { xs: 2, md: 50 },
+        overflow: "hidden",
       }}
     >
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: -2,
+        }}
+      >
+        <source src={GlitchVideo} type="video/mp4" />
+      </video>
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(255, 255, 255, 0.90)",
+          zIndex: -1,
+        }}
+      />
+
       <Typography
         variant="h6"
         sx={{
           letterSpacing: 7,
           mb: 2,
           textAlign: "left",
-          fontSize: {
-            xs: "1rem",
-            md: "1.5rem",
-          },
+          fontSize: { xs: "1rem", md: "1.5rem" },
         }}
       >
         {t("hero.name").toUpperCase()}
@@ -61,10 +90,7 @@ const HeroSection = () => {
           sx={{
             fontWeight: "bold",
             mr: 2,
-            fontSize: {
-              xs: "3.5rem",
-              md: "5.5rem",
-            },
+            fontSize: { xs: "3.5rem", md: "5.5rem" },
           }}
         >
           {t("hero.title.developer")}
@@ -78,10 +104,7 @@ const HeroSection = () => {
           color="#6E6E6E"
           sx={{
             fontWeight: "bold",
-            fontSize: {
-              xs: "3.5rem",
-              md: "5.5rem",
-            },
+            fontSize: { xs: "3.5rem", md: "5.5rem" },
           }}
         >
           +
@@ -92,10 +115,7 @@ const HeroSection = () => {
           color="#00DA94"
           sx={{
             fontWeight: "bold",
-            fontSize: {
-              xs: "3.5rem",
-              md: "5.5rem",
-            },
+            fontSize: { xs: "3.5rem", md: "5.5rem" },
           }}
         >
           <ReactTypingEffect
@@ -115,10 +135,7 @@ const HeroSection = () => {
           variant="body1"
           sx={{
             mt: 4,
-            fontSize: {
-              xs: "1rem",
-              md: "1.25rem",
-            },
+            fontSize: { xs: "1rem", md: "1.25rem" },
           }}
         >
           {t("hero.description")}

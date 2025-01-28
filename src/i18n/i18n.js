@@ -34,6 +34,7 @@ const resources = {
       ToDo_description:
         "A simple yet effective ToDo List app. This project demonstrates the use of React.js and Material UI to manage tasks efficiently.",
       view_repo: "View Repo",
+      live_preview: "Live preview",
     },
   },
   es: {
@@ -66,7 +67,8 @@ const resources = {
         "Reco es una aplicación de recomendaciones para conectar a los usuarios con profesionales confiables como plomeros, electricistas y carpinteros. Construida con React.js, presenta una estructura robusta y una experiencia de usuario fluida.",
       ToDo_description:
         "Una aplicación de lista de tareas simple pero efectiva. Este proyecto demuestra el uso de React.js y Material UI para gestionar tareas de manera eficiente.",
-      view_repo: "Ver repositorio",
+      view_repo: "Ver Repositorio",
+      live_preview: "Vista previa",
     },
   },
 };

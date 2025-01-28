@@ -40,7 +40,7 @@ const Navbar = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    setIsDrawerOpen(false); // Cierra el menú móvil
+    setIsDrawerOpen(false);
   };
 
   return (
@@ -58,6 +58,7 @@ const Navbar = () => {
             alignItems: "center",
             cursor: "pointer",
           }}
+          onClick={() => handleScrollToSection("home")} // Redirige al home
         >
           <img src={logoRolando} alt="Logo" style={{ height: 40 }} />
         </Box>
@@ -114,16 +115,16 @@ const Navbar = () => {
             <IconButton
               edge="end"
               color="inherit"
-              onClick={() => toggleDrawer(true)}
+              onClick={() => toggleDrawer(!isDrawerOpen)}
             >
               <MenuIcon />
             </IconButton>
             <Drawer
               anchor="left"
               open={isDrawerOpen}
-              onClose={() => toggleDrawer(true)}
+              onClose={() => toggleDrawer(false)}
               ModalProps={{
-                keepMounted: true, // Better open performance on mobile.
+                keepMounted: true,
               }}
               sx={{
                 "& .MuiDrawer-paper": {

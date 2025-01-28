@@ -15,12 +15,15 @@ import ToDo from "../assets/images/todo_list.jpg";
 import byteCode_logo from "../assets/images/byteCode_logo.svg";
 import Reco_logo from "../assets/images/reco_logo.svg";
 import todo_logo from "../assets/images/todo_logo.svg";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const projects = [
   {
     id: 1,
     title: "byteCode",
     description: "byteCode_description",
+    repoLink: "https://github.com/orellanamr/bytecode_landing",
+    liveLink: "https://orellanamr.github.io/bytecode_landing/",
     image: byteCode,
     logo: byteCode_logo,
     technologies: ["React.js", "Material UI", "JavaScript"],
@@ -29,6 +32,9 @@ const projects = [
     id: 2,
     title: "Reco",
     description: "Reco_description",
+    repoLink:
+      "https://github.com/andrea-calderon/Web_App_Chispudos/tree/development",
+    liveLink: "",
     image: Reco,
     logo: Reco_logo,
     technologies: ["React.js", "Git", "JavaScript"],
@@ -37,6 +43,8 @@ const projects = [
     id: 3,
     title: "ToDo List",
     description: "ToDo_description",
+    repoLink: "",
+    liveLink: "",
     image: ToDo,
     logo: todo_logo,
     technologies: ["React.js", "Material UI", "CSS"],
@@ -144,6 +152,7 @@ const Projects = () => {
                 <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
                   <img
                     src={project.logo}
+                    href={project.liveLink}
                     alt={`${project.title} logo`}
                     style={{ marginRight: "8px", verticalAlign: "sub" }}
                   />
@@ -154,24 +163,41 @@ const Projects = () => {
                 <Typography variant="body2" gutterBottom>
                   {t(project.description)}
                 </Typography>
-                <Button
-                  variant="text"
-                  size="small"
-                  href={project.repoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{
-                    mt: 1,
-                    color: "white",
-                    textDecoration: "underline",
-                    "&:hover": {
-                      borderColor: "white",
-                      backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    },
-                  }}
-                >
-                  {t("view_repo")}
-                </Button>
+                <Box sx={{ display: "flex", gap: 2, mt: 1 }}>
+                  <Button
+                    variant="text"
+                    size="small"
+                    href={project.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: "white",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        backgroundColor: "transparent",
+                      },
+                    }}
+                    startIcon={<GitHubIcon />}
+                  >
+                    {t("view_repo")}
+                  </Button>
+                  <Button
+                    variant="text"
+                    size="small"
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: "white",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        backgroundColor: "transparent",
+                      },
+                    }}
+                  >
+                    {t("live_preview")}
+                  </Button>
+                </Box>
               </Box>
             </Card>
             <Box sx={{ mt: 2 }}>
