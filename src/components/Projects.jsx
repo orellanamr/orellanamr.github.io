@@ -37,7 +37,7 @@ const projects = [
     liveLink: "",
     image: Reco,
     logo: Reco_logo,
-    technologies: ["React.js", "Git", "JavaScript"],
+    technologies: ["React.js", "Git", "RTK Query", "JavaScript"],
   },
   {
     id: 3,
