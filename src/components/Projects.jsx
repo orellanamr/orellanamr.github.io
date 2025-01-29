@@ -1,10 +1,10 @@
 import {
   Box,
   Typography,
+  Button,
   Grid,
   Card,
   CardMedia,
-  CardContent,
   Chip,
   Stack,
 } from "@mui/material";
@@ -12,28 +12,42 @@ import { useTranslation } from "react-i18next";
 import byteCode from "../assets/images/byteCode_landing.jpg";
 import Reco from "../assets/images/reco_desktop.jpg";
 import ToDo from "../assets/images/todo_list.jpg";
+import byteCode_logo from "../assets/images/byteCode_logo.svg";
+import Reco_logo from "../assets/images/reco_logo.svg";
+import todo_logo from "../assets/images/todo_logo.svg";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const projects = [
   {
     id: 1,
     title: "byteCode",
     description: "byteCode_description",
+    repoLink: "https://github.com/orellanamr/bytecode_landing",
+    liveLink: "https://orellanamr.github.io/bytecode_landing/",
     image: byteCode,
-    technologies: ["React.js", "Material UI", "JavaScript"],
+    logo: byteCode_logo,
+    technologies: ["React.js", "JavaScript", "Material UI", "Git"],
   },
   {
     id: 2,
     title: "Reco",
     description: "Reco_description",
+    repoLink:
+      "https://github.com/andrea-calderon/Web_App_Chispudos/tree/development",
+    liveLink: "",
     image: Reco,
-    technologies: ["React.js", "Git", "JavaScript"],
+    logo: Reco_logo,
+    technologies: ["React.js", "RTK Query", "JavaScript", "Git"],
   },
   {
     id: 3,
     title: "ToDo List",
     description: "ToDo_description",
+    repoLink: "",
+    liveLink: "",
     image: ToDo,
-    technologies: ["React.js", "Material UI", "CSS"],
+    logo: todo_logo,
+    technologies: ["React.js", "Material UI", "JavaScript"],
   },
 ];
 
@@ -41,7 +55,7 @@ const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ py: 8, px: 4 }}>
+    <Box sx={{ py: 12, px: 4 }}>
       <Grid
         container
         spacing={2}
@@ -60,7 +74,7 @@ const Projects = () => {
       >
         <Grid item xs={12} md={6}>
           <Typography
-            variant="h1"
+            variant="h2"
             fontWeight="bold"
             color="#000000"
             sx={{ textAlign: "left" }}
@@ -100,8 +114,6 @@ const Projects = () => {
             <Card
               sx={{
                 position: "relative",
-                overflow: "auto",
-                height: 400,
                 borderRadius: 4,
                 boxShadow: "none",
                 "&:hover .overlay": {
@@ -128,29 +140,65 @@ const Projects = () => {
                   color: "white",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "center",
+                  justifyContent: "flex-end ",
                   alignItems: "flex-start",
                   textAlign: "left",
                   opacity: 0,
                   transition: "opacity 0.3s ease-in-out",
+                  padding: 2,
+                  boxSizing: "border-box",
                 }}
               >
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                  {project.title}
-                </Typography>
-                <Typography variant="body2">
+                <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+                  <img
+                    src={project.logo}
+                    href={project.liveLink}
+                    alt={`${project.title} logo`}
+                    style={{ marginRight: "8px", verticalAlign: "sub" }}
+                  />
+                  <Typography variant="h6" fontWeight="bold" gutterBottom>
+                    {project.title}
+                  </Typography>
+                </Box>
+                <Typography variant="body2" gutterBottom>
                   {t(project.description)}
                 </Typography>
+                <Box sx={{ display: "flex", gap: 2, mt: 1 }}>
+                  <Button
+                    variant="text"
+                    size="small"
+                    href={project.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: "white",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        backgroundColor: "transparent",
+                      },
+                    }}
+                    startIcon={<GitHubIcon />}
+                  >
+                    {t("view_repo")}
+                  </Button>
+                  <Button
+                    variant="text"
+                    size="small"
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: "white",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        backgroundColor: "transparent",
+                      },
+                    }}
+                  >
+                    {t("live_preview")}
+                  </Button>
+                </Box>
               </Box>
-              <CardContent
-                sx={{
-                  display: "flex",
-                  gap: 1,
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                  pt: 2,
-                }}
-              ></CardContent>
             </Card>
             <Box sx={{ mt: 2 }}>
               <Stack direction="row" spacing={1}>

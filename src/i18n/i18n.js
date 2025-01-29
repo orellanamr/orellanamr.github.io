@@ -16,7 +16,9 @@ const resources = {
         name: "Rolando Orellana",
         title: {
           developer: "Developer",
-          designer: "Designer",
+          innovative: "Innovative",
+          creative: "Creative",
+          passionate: "Passionate",
         },
         description:
           "React Developer with 6+ years of experience in design and digital marketing.",
@@ -31,6 +33,8 @@ const resources = {
         "Reco is a recommendation app to connect users with reliable professionals such as plumbers, electricians, and carpenters. Built with React.js, it features a robust structure and a seamless user experience.",
       ToDo_description:
         "A simple yet effective ToDo List app. This project demonstrates the use of React.js and Material UI to manage tasks efficiently.",
+      view_repo: "View Repo",
+      live_preview: "Live preview",
     },
   },
   es: {
@@ -46,7 +50,9 @@ const resources = {
         name: "Rolando Orellana",
         title: {
           developer: "Desarrollador",
-          designer: "Diseñador",
+          innovative: "Innovador",
+          creative: "Creativo",
+          passionate: "Apasionado",
         },
         description:
           "Desarrollador React con más de 6 años de experiencia en diseño y marketing digital.",
@@ -61,6 +67,8 @@ const resources = {
         "Reco es una aplicación de recomendaciones para conectar a los usuarios con profesionales confiables como plomeros, electricistas y carpinteros. Construida con React.js, presenta una estructura robusta y una experiencia de usuario fluida.",
       ToDo_description:
         "Una aplicación de lista de tareas simple pero efectiva. Este proyecto demuestra el uso de React.js y Material UI para gestionar tareas de manera eficiente.",
+      view_repo: "Ver Repositorio",
+      live_preview: "Vista previa",
     },
   },
 };

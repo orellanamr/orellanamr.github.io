@@ -14,13 +14,13 @@ const Footer = () => {
       sx={{
         backgroundColor: "#F9F9F9",
         color: "#000000",
-        py: 6,
+        py: 8,
         px: 2,
         textAlign: "center",
       }}
     >
       <Typography variant="h6" fontWeight="bold" gutterBottom>
-        Rolando Orellana
+        Rolando Orellana.
       </Typography>
 
       <Grid container justifyContent="center" spacing={2}>
@@ -32,7 +32,7 @@ const Footer = () => {
               color="inherit"
               sx={{ fontSize: "1rem" }}
             >
-              <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+              <Typography sx={{ mt: 3 }} variant="body1">
                 {t(section)}
               </Typography>
             </Link>
@@ -40,7 +40,7 @@ const Footer = () => {
         ))}
       </Grid>
 
-      <Box sx={{ mt: 2 }}>
+      <Box sx={{ mt: 3 }}>
         <IconButton
           component="a"
           href="https://www.linkedin.com/in/rolandoreactdeveloper/"
@@ -69,7 +69,7 @@ const Footer = () => {
           <InstagramIcon />
         </IconButton>
       </Box>
-      <Box sx={{ mt: 2 }}>
+      <Box sx={{ mt: 3 }}>
         <Typography variant="body2">
           &copy; {new Date().getFullYear()} Rolando Orellana -{" "}
           {t("all_rights_reserved")}
