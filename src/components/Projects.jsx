@@ -26,7 +26,7 @@ const projects = [
     liveLink: "https://orellanamr.github.io/bytecode_landing/",
     image: byteCode,
     logo: byteCode_logo,
-    technologies: ["React.js", "Material UI", "JavaScript"],
+    technologies: ["React.js", "JavaScript", "Material UI", "Git"],
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const projects = [
     liveLink: "",
     image: Reco,
     logo: Reco_logo,
-    technologies: ["React.js", "Git", "RTK Query", "JavaScript"],
+    technologies: ["React.js", "RTK Query", "JavaScript", "Git"],
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const projects = [
     liveLink: "",
     image: ToDo,
     logo: todo_logo,
-    technologies: ["React.js", "Material UI", "CSS"],
+    technologies: ["React.js", "Material UI", "JavaScript"],
   },
 ];
 

@@ -48,7 +48,13 @@ const Navbar = () => {
       position="fixed"
       color="transparent"
       elevation={0}
-      sx={{ px: 2, zIndex: 1300, backgroundColor: "#FFFFFF" }}
+      sx={{
+        pt: 1,
+        px: 2,
+        zIndex: 1300,
+        backgroundColor: "#FFFFFF",
+        height: "80px",
+      }}
     >
       <Toolbar>
         <Box
@@ -58,7 +64,7 @@ const Navbar = () => {
             alignItems: "center",
             cursor: "pointer",
           }}
-          onClick={() => handleScrollToSection("home")} // Redirige al home
+          onClick={() => handleScrollToSection("home")}
         >
           <img src={logoRolando} alt="Logo" style={{ height: 40 }} />
         </Box>

@@ -66,7 +66,7 @@ const HeroSection = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(255, 255, 255, 0.90)",
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
           zIndex: -1,
         }}
       />
@@ -75,6 +75,7 @@ const HeroSection = () => {
         variant="h6"
         sx={{
           letterSpacing: 7,
+          color: "white",
           mb: 2,
           textAlign: "left",
           fontSize: { xs: "1rem", md: "1.5rem" },
@@ -86,7 +87,7 @@ const HeroSection = () => {
       <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
         <Typography
           variant="h1"
-          color="black"
+          color="white"
           sx={{
             fontWeight: "bold",
             mr: 2,
@@ -95,7 +96,7 @@ const HeroSection = () => {
         >
           {t("hero.title.developer")}
         </Typography>
-        <Box sx={{ borderBottom: "2px solid black", width: "100%" }} />
+        <Box sx={{ borderBottom: "2px solid white", width: "100%" }} />
       </Box>
       <Box>
         <Typography
@@ -105,6 +106,7 @@ const HeroSection = () => {
           sx={{
             fontWeight: "bold",
             fontSize: { xs: "3.5rem", md: "5.5rem" },
+            letterSpacing: "1rem",
           }}
         >
           +
@@ -124,9 +126,9 @@ const HeroSection = () => {
               t("hero.title.creative"),
               t("hero.title.passionate"),
             ]}
-            speed={100}
-            eraseSpeed={80}
-            eraseDelay={2000}
+            speed={60}
+            eraseSpeed={50}
+            eraseDelay={1500}
           />
         </Typography>
       </Box>
@@ -135,6 +137,7 @@ const HeroSection = () => {
           variant="body1"
           sx={{
             mt: 4,
+            color: "rgba(230, 230, 230, 0.8)",
             fontSize: { xs: "1rem", md: "1.25rem" },
           }}
         >
@@ -162,6 +165,12 @@ const HeroSection = () => {
             sx={{
               borderRadius: "50px",
               px: 4,
+            }}
+            onClick={() => {
+              const projectsSection = document.getElementById("projects");
+              if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: "smooth" });
+              }
             }}
           >
             <Box></Box>
