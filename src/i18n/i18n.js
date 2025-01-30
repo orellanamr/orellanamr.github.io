@@ -21,7 +21,7 @@ const resources = {
           passionate: "Passionate",
         },
         description:
-          "React Developer with 1+ year of experience building web applications. Passionate about creating intuitive UIs and delivering high-quality code.",
+          "React Developer with 1+ year of experience in web apps and a background in 6+ years of design & digital marketing.",
         scrollDown: "Scroll Down",
       },
       Projects: "Projects",
@@ -55,7 +55,7 @@ const resources = {
           passionate: "Apasionado",
         },
         description:
-          "Desarrollador React con más de 1 año de experiencia creando aplicaciones web. Apasionado por diseñar interfaces intuitivas y escribir código de alta calidad.",
+          "Desarrollador React con 1+ año de experiencia en aplicaciones web y un backgroun de 6+ años en diseño y marketing digital.",
         scrollDown: "Deslizar hacia abajo",
       },
       Projects: "Proyectos",
