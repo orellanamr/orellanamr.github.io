@@ -61,14 +61,7 @@ const Projects = () => {
         spacing={2}
         alignItems="center"
         sx={{
-          paddingLeft: {
-            xs: 2,
-            md: 24,
-          },
-          paddingRight: {
-            xs: 2,
-            md: 24,
-          },
+          px: { xs: 2, md: 16, lg: 22 },
           paddingBottom: 4,
         }}
       >
@@ -77,7 +70,10 @@ const Projects = () => {
             variant="h2"
             fontWeight="bold"
             color="#000000"
-            sx={{ textAlign: "left" }}
+            sx={{
+              textAlign: "left",
+              fontSize: { xs: "2.5rem", md: "4rem", lg: "5rem" },
+            }}
             gutterBottom
           >
             {t("Projects")}
@@ -87,7 +83,10 @@ const Projects = () => {
           <Typography
             variant="h3"
             color="#000000"
-            sx={{ textAlign: "left" }}
+            sx={{
+              textAlign: "left",
+              fontSize: { xs: "1.1rem", md: "1.5rem", lg: "1.5rem" },
+            }}
             gutterBottom
           >
             {t("projects_subtitle")}
@@ -99,14 +98,7 @@ const Projects = () => {
         container
         spacing={4}
         sx={{
-          paddingLeft: {
-            xs: 2,
-            md: 24,
-          },
-          paddingRight: {
-            xs: 2,
-            md: 24,
-          },
+          px: { xs: 2, md: 5, lg: 20 },
         }}
       >
         {projects.map((project) => (
@@ -184,9 +176,10 @@ const Projects = () => {
                   <Button
                     variant="text"
                     size="small"
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={project.liveLink || "#"}
+                    target={project.liveLink ? "_blank" : "_self"}
+                    rel={project.liveLink ? "noopener noreferrer" : ""}
+                    disabled={!project.liveLink}
                     sx={{
                       color: "white",
                       "&:hover": {
@@ -203,7 +196,14 @@ const Projects = () => {
             <Box sx={{ mt: 2 }}>
               <Stack direction="row" spacing={1}>
                 {project.technologies.map((tech, index) => (
-                  <Chip key={index} label={tech} variant="outlined" />
+                  <Chip
+                    key={index}
+                    label={tech}
+                    variant="outlined"
+                    sx={{
+                      fontSize: "10pts",
+                    }}
+                  />
                 ))}
               </Stack>
             </Box>

@@ -37,7 +37,7 @@ const HeroSection = () => {
         justifyContent: "center",
         height: "100vh",
         color: "text.primary",
-        px: { xs: 2, md: 50 },
+        px: { xs: 4, md: 30, lg: 50 },
         overflow: "hidden",
       }}
     >
@@ -66,7 +66,7 @@ const HeroSection = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
           zIndex: -1,
         }}
       />
@@ -78,7 +78,7 @@ const HeroSection = () => {
           color: "white",
           mb: 2,
           textAlign: "left",
-          fontSize: { xs: "1rem", md: "1.5rem" },
+          fontSize: { xs: "0.8rem", md: "1.25rem", lg: "1.5rem" },
         }}
       >
         {t("hero.name").toUpperCase()}
@@ -91,7 +91,7 @@ const HeroSection = () => {
           sx={{
             fontWeight: "bold",
             mr: 2,
-            fontSize: { xs: "3.5rem", md: "5.5rem" },
+            fontSize: { xs: "2.5rem", md: "4rem", lg: "5rem" },
           }}
         >
           {t("hero.title.developer")}
@@ -105,7 +105,7 @@ const HeroSection = () => {
           color="#6E6E6E"
           sx={{
             fontWeight: "bold",
-            fontSize: { xs: "3.5rem", md: "5.5rem" },
+            fontSize: { xs: "2rem", md: "4rem", lg: "5rem" },
             letterSpacing: "1rem",
           }}
         >
@@ -117,7 +117,7 @@ const HeroSection = () => {
           color="#00DA94"
           sx={{
             fontWeight: "bold",
-            fontSize: { xs: "3.5rem", md: "5.5rem" },
+            fontSize: { xs: "2.5rem", md: "4rem", lg: "5rem" },
           }}
         >
           <ReactTypingEffect
