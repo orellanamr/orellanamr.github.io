@@ -30,9 +30,9 @@ const resources = {
       byteCode_description:
         "byteCode is a modern landing page built with React.js and Material UI. Designed to attract and convert users, it showcases a dynamic and responsive design.",
       Reco_description:
-        "Reco is a recommendation app to connect users with reliable professionals such as plumbers, electricians, and carpenters. Built with React.js, it features a robust structure and a seamless user experience.",
-      ToDo_description:
-        "A simple yet effective ToDo List app. This project demonstrates the use of React.js and Material UI to manage tasks efficiently.",
+        "Reco, developed in React.js with Redux and RTK Query, connects users with verified professionals. Its atomic design ensures scalability and a seamless experience.",
+      Portfolio_description:
+        "This portfolio was built with React.js, Vite, and Material UI, it features a modern, responsive design and smooth animations.",
       view_repo: "View Repo",
       live_preview: "Live preview",
     },
@@ -64,9 +64,9 @@ const resources = {
       byteCode_description:
         "byteCode es una página de aterrizaje moderna construida con React.js y Material UI. Diseñada para atraer y convertir usuarios, muestra un diseño dinámico y responsivo.",
       Reco_description:
-        "Reco es una aplicación de recomendaciones para conectar a los usuarios con profesionales confiables como plomeros, electricistas y carpinteros. Construida con React.js, presenta una estructura robusta y una experiencia de usuario fluida.",
-      ToDo_description:
-        "Una aplicación de lista de tareas simple pero efectiva. Este proyecto demuestra el uso de React.js y Material UI para gestionar tareas de manera eficiente.",
+        "Desarrollada en React.js con Redux y RTK Query, conecta usuarios con profesionales verificados. Su diseño atómico garantiza escalabilidad y fluidez.",
+      Portfolio_description:
+        "Este portafolio fue construido con React.js, Vite y Material UI, cuenta con un diseño moderno, responsivo y animaciones fluidas.",
       view_repo: "Ver Repositorio",
       live_preview: "Vista previa",
     },

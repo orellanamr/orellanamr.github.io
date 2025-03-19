@@ -24,7 +24,7 @@ const Footer = () => {
       </Typography>
 
       <Grid container justifyContent="center" spacing={2}>
-        {["home", "about", "projects", "contact"].map((section, index) => (
+        {["home", "projects", "contact"].map((section, index) => (
           <Grid item key={index}>
             <Link
               href={`#${section}`}

@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import {
   Menu as MenuIcon,
-  Language as LanguageIcon,
+  Translate as TranslateIcon,
 } from "@mui/icons-material";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import logoRolando from "../assets/images/logoRolando.svg";
@@ -93,7 +93,7 @@ const Navbar = () => {
               {t("contact")}
             </Button>
             <IconButton color="inherit" onClick={toggleLanguage}>
-              <LanguageIcon />
+              <TranslateIcon />
             </IconButton>
             <Button
               variant="contained"
@@ -174,7 +174,7 @@ const Navbar = () => {
                     onClick={toggleLanguage}
                     sx={{ display: "flex", alignItems: "center" }}
                   >
-                    <LanguageIcon sx={{ mr: 1 }} />
+                    <TranslateIcon sx={{ mr: 1 }} />
                     {i18n.language === "en" ? "Español" : "English"}
                   </Button>
 

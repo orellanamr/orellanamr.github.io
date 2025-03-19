@@ -11,7 +11,7 @@ import {
 import { useTranslation } from "react-i18next";
 import byteCode from "../assets/images/byteCode_landing.jpg";
 import Reco from "../assets/images/reco_desktop.jpg";
-import ToDo from "../assets/images/todo_list.jpg";
+import portfolioRolando from "../assets/images/portfolio_Rolando.jpg";
 import byteCode_logo from "../assets/images/byteCode_logo.svg";
 import Reco_logo from "../assets/images/reco_logo.svg";
 import todo_logo from "../assets/images/todo_logo.svg";
@@ -20,32 +20,32 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const projects = [
   {
     id: 1,
-    title: "byteCode",
-    description: "byteCode_description",
-    repoLink: "https://github.com/orellanamr/bytecode_landing",
-    liveLink: "https://orellanamr.github.io/bytecode_landing/",
-    image: byteCode,
-    logo: byteCode_logo,
-    technologies: ["React.js", "JavaScript", "Material UI", "Git"],
-  },
-  {
-    id: 2,
     title: "Reco",
     description: "Reco_description",
     repoLink:
       "https://github.com/andrea-calderon/Web_App_Chispudos/tree/development",
-    liveLink: "",
+    liveLink: "https://recolatam.com",
     image: Reco,
     logo: Reco_logo,
     technologies: ["React.js", "RTK Query", "JavaScript", "Git"],
   },
   {
+    id: 2,
+    title: "byteCode",
+    description: "byteCode_description",
+    repoLink: "https://github.com/orellanamr/bytecode_landing",
+    liveLink: "https://bytecodelatam.com",
+    image: byteCode,
+    logo: byteCode_logo,
+    technologies: ["React.js", "JavaScript", "Material UI", "Git"],
+  },
+  {
     id: 3,
-    title: "ToDo List",
-    description: "ToDo_description",
-    repoLink: "",
+    title: "Portfolio",
+    description: "Portfolio_description",
+    repoLink: "https://github.com/orellanamr/orellanamr.github.io",
     liveLink: "",
-    image: ToDo,
+    image: portfolioRolando,
     logo: todo_logo,
     technologies: ["React.js", "Material UI", "JavaScript"],
   },
