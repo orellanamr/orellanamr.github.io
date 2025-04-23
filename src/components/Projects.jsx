@@ -13,7 +13,6 @@ import Reco from "../assets/images/reco_desktop.jpg";
 import portfolioRolando from "../assets/images/portfolio_Rolando.jpg";
 import byteCode_logo from "../assets/images/byteCode_logo.svg";
 import Reco_logo from "../assets/images/reco_logo.svg";
-import Time_logo from "../assets/images/time_logo.svg";
 import TODo_logo from "../assets/images/todo_logo.svg";
 import todo_logo from "../assets/images/todo_logo.svg";
 import GitHubIcon from "@mui/icons-material/GitHub";
