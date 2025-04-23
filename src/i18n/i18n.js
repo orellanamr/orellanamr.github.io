@@ -31,6 +31,8 @@ const resources = {
         "byteCode is a modern landing page built with React.js and Material UI. Designed to attract and convert users, it showcases a dynamic and responsive design.",
       Reco_description:
         "Reco, developed in React.js with Redux and RTK Query, connects users with verified professionals. Its atomic design ensures scalability and a seamless experience.",
+      FocusTime_description:
+        "FocusTime is a productivity app built with React Native and Expo. The app is cross-platform, leveraging hooks for state management and Git for version control.",
       Portfolio_description:
         "This portfolio was built with React.js, Vite, and Material UI, it features a modern, responsive design and smooth animations.",
       view_repo: "View Repo",
@@ -65,6 +67,8 @@ const resources = {
         "byteCode es una página de aterrizaje moderna construida con React.js y Material UI. Diseñada para atraer y convertir usuarios, muestra un diseño dinámico y responsivo.",
       Reco_description:
         "Desarrollada en React.js con Redux y RTK Query, conecta usuarios con profesionales verificados. Su diseño atómico garantiza escalabilidad y fluidez.",
+      FocusTime_description:
+        "FocusTime es una app de productividad construida con React Native y Expo. Es multiplataforma y emplea hooks para el estado y Git para el control de versiones.",
       Portfolio_description:
         "Este portafolio fue construido con React.js, Vite y Material UI, cuenta con un diseño moderno, responsivo y animaciones fluidas.",
       view_repo: "Ver Repositorio",

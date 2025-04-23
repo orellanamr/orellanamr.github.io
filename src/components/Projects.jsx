@@ -5,7 +5,6 @@ import {
   Grid,
   Card,
   CardMedia,
-  Chip,
   Stack,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
@@ -14,8 +13,16 @@ import Reco from "../assets/images/reco_desktop.jpg";
 import portfolioRolando from "../assets/images/portfolio_Rolando.jpg";
 import byteCode_logo from "../assets/images/byteCode_logo.svg";
 import Reco_logo from "../assets/images/reco_logo.svg";
+import Time_logo from "../assets/images/time_logo.svg";
+import TODo_logo from "../assets/images/todo_logo.svg";
 import todo_logo from "../assets/images/todo_logo.svg";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import reactLogo from "../assets/images/logos/react.svg";
+import gitLogo from "../assets/images/logos/git.svg";
+import reduxLogo from "../assets/images/logos/redux.svg";
+import materialUILogo from "../assets/images/logos/mui.svg";
+import expoLogo from "../assets/images/logos/expo.svg";
+import focusTimeCover from "../assets/images/FocusTimeApp.png";
 
 const projects = [
   {
@@ -27,27 +34,53 @@ const projects = [
     liveLink: "https://recolatam.com",
     image: Reco,
     logo: Reco_logo,
-    technologies: ["React.js", "RTK Query", "JavaScript", "Git"],
+    technologies: [
+      { name: "React", logo: reactLogo },
+      { name: "Redux", logo: reduxLogo },
+      { name: "Git", logo: gitLogo },
+    ],
   },
   {
     id: 2,
+    title: "Focus Time",
+    description: "FocusTime_description",
+    repoLink: "https://github.com/orellanamr/focusTime",
+    liveLink: "",
+    image: focusTimeCover,
+    logo: TODo_logo,
+    technologies: [
+      { name: "React Native", logo: reactLogo },
+      { name: "Expo", logo: expoLogo },
+      { name: "Git", logo: gitLogo },
+    ],
+  },
+  {
+    id: 3,
     title: "byteCode",
     description: "byteCode_description",
     repoLink: "https://github.com/orellanamr/bytecode_landing",
     liveLink: "https://bytecodelatam.com",
     image: byteCode,
     logo: byteCode_logo,
-    technologies: ["React.js", "JavaScript", "Material UI", "Git"],
+    technologies: [
+      { name: "React", logo: reactLogo },
+      { name: "Material UI", logo: materialUILogo },
+      { name: "Git", logo: gitLogo },
+    ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Portfolio",
     description: "Portfolio_description",
     repoLink: "https://github.com/orellanamr/orellanamr.github.io",
-    liveLink: "",
+    liveLink: "https://orellanamr.github.io/",
     image: portfolioRolando,
     logo: todo_logo,
-    technologies: ["React.js", "Material UI", "JavaScript"],
+    technologies: [
+      { name: "React", logo: reactLogo },
+      { name: "Material UI", logo: materialUILogo },
+      { name: "Git", logo: gitLogo },
+    ],
   },
 ];
 
@@ -196,14 +229,30 @@ const Projects = () => {
             <Box sx={{ mt: 2 }}>
               <Stack direction="row" spacing={1}>
                 {project.technologies.map((tech, index) => (
-                  <Chip
+                  <Box
                     key={index}
-                    label={tech}
-                    variant="outlined"
                     sx={{
-                      fontSize: "10pts",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      border: "1px solid #ccc",
+                      borderRadius: "16px",
+                      padding: "4px 8px",
+                      transition: "all 0.3s ease-in-out",
+                      "&:hover": {
+                        borderColor: "#00DA94",
+                        backgroundColor: "rgba(0, 218, 148, 0.1)",
+                        transform: "scale(1.05)",
+                      },
                     }}
-                  />
+                  >
+                    <img
+                      src={tech.logo}
+                      alt={tech.name}
+                      style={{ width: "20px", height: "20px" }}
+                    />
+                    <Typography variant="body2">{tech.name}</Typography>
+                  </Box>
                 ))}
               </Stack>
             </Box>
