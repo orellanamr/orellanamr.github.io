@@ -7,6 +7,9 @@ const resources = {
     translation: {
       home: "Home",
       about: "About",
+      about_me_title: "Hey there!",
+      about_me_description:
+        "I'm a frontend developer with 1.5+ years of experience building secure, high-performance web and mobile apps using React and React Native. I combine a strong focus on UX with solid skills in API integration and testing with Postman. I thrive in agile teams and follow clean, scalable Git workflows.",
       projects: "Projects",
       contact: "Contact",
       download_cv: "Download CV",
@@ -21,7 +24,7 @@ const resources = {
           passionate: "Passionate",
         },
         description:
-          "React Developer with 1+ year of experience in web apps and a background in 6+ years of design & digital marketing.",
+          "Frontend developer with 1.5+ years of experience in web and mobile apps using React & React Native, plus 6+ years in design and digital marketing.",
         scrollDown: "Scroll Down",
       },
       Projects: "Projects",
@@ -43,6 +46,9 @@ const resources = {
     translation: {
       home: "Inicio",
       about: "Acerca",
+      about_me_title: "¡Hola!",
+      about_me_description:
+        "Soy desarrollador frontend con más de 1.5 años de experiencia creando aplicaciones web y móviles seguras y de alto rendimiento con React y React Native. Combino enfoque en UX con habilidades en integración de APIs y testing con Postman. Me adapto bien a equipos ágiles y trabajo con flujos de Git limpios y escalables.",
       projects: "Proyectos",
       contact: "Contacto",
       download_cv: "Descargar CV",
@@ -57,7 +63,7 @@ const resources = {
           passionate: "Apasionado",
         },
         description:
-          "Desarrollador React con 1+ año de experiencia en aplicaciones web y un backgroun de 6+ años en diseño y marketing digital.",
+          "Desarrollador frontend con más de 1.5 años de experiencia en aplicaciones web y móviles con React & React Native, y más de 6 años en diseño y marketing digital.",
         scrollDown: "Deslizar hacia abajo",
       },
       Projects: "Proyectos",
