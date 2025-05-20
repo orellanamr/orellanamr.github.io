@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
+import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
@@ -13,6 +14,9 @@ const App = () => {
       </div>
       <div id="about">
         <AboutMe />
+      </div>
+      <div id="techStack">
+        <TechStack />
       </div>
       <div id="projects">
         <Projects />

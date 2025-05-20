@@ -9,7 +9,7 @@ const resources = {
       about: "About",
       about_me_title: "Hey there!",
       about_me_description:
-        "I'm a frontend developer with 1.5+ years of experience building secure, high-performance web and mobile apps using React and React Native. I combine a strong focus on UX with solid skills in API integration and testing with Postman. I thrive in agile teams and follow clean, scalable Git workflows.",
+        "I'm a frontend developer with 1.5+ years of experience building secure, high-performance web and mobile apps using React and React Native. I focus on clean UX, scalable code, and API integration. I also bring hands-on experience in manual testing, including API testing with Postman and exploratory testing. I thrive in agile teams and follow Git-based workflows.",
       projects: "Projects",
       contact: "Contact",
       download_cv: "Download CV",
@@ -48,7 +48,7 @@ const resources = {
       about: "Acerca",
       about_me_title: "¡Hola!",
       about_me_description:
-        "Soy desarrollador frontend con más de 1.5 años de experiencia creando aplicaciones web y móviles seguras y de alto rendimiento con React y React Native. Combino enfoque en UX con habilidades en integración de APIs y testing con Postman. Me adapto bien a equipos ágiles y trabajo con flujos de Git limpios y escalables.",
+        "Soy desarrollador frontend con más de 1.5 años de experiencia creando aplicaciones web y móviles seguras y de alto rendimiento con React y React Native. Me enfoco en la experiencia de usuario, código escalable e integración de APIs. También tengo experiencia práctica en testing manual, incluyendo pruebas con Postman y testing exploratorio. Me adapto bien a equipos ágiles y trabajo con flujos basados en Git.",
       projects: "Proyectos",
       contact: "Contacto",
       download_cv: "Descargar CV",

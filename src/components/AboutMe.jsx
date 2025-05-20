@@ -67,7 +67,7 @@ const AboutMe = () => {
             sx={{
               maxWidth: 700,
               //mx: "auto",
-              fontSize: { xs: "1rem", md: "1.25rem" },
+              fontSize: { xs: "1rem", md: "1.2rem" },
               textAlign: { xs: "left", md: "left" },
             }}
           >

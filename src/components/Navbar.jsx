@@ -14,6 +14,7 @@ import {
   Menu as MenuIcon,
   Translate as TranslateIcon,
 } from "@mui/icons-material";
+import CloseIcon from "@mui/icons-material/Close";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import logoRolando from "../assets/images/logoRolando.svg";
 import RolandoCV from "../assets/docs/Rolando_Orellana_CV.pdf";
@@ -150,6 +151,19 @@ const Navbar = () => {
                   gap: 2,
                 }}
               >
+                <IconButton
+                  onClick={() => toggleDrawer(false)}
+                  sx={{
+                    position: "absolute",
+                    zIndex: 1,
+                    top: 125,
+                    right: 50,
+                    color: "text.primary",
+                  }}
+                  aria-label="close"
+                >
+                  <CloseIcon />
+                </IconButton>
                 <MenuItem onClick={() => handleScrollToSection("home")}>
                   <Typography variant="h6">{t("home")}</Typography>
                 </MenuItem>
