@@ -21,23 +21,36 @@ const Footer = () => {
     >
       <Typography variant="h6" fontWeight="bold" gutterBottom>
         Rolando Orellana.
+        <Typography variant="body2" sx={{ mt: 1 }}>
+          <MailOutlineIcon sx={{ mr: 1, verticalAlign: "middle" }} />{" "}
+          {t("contact_info")}:{" "}
+          <Link
+            href="mailto:rolando.orellana@example.com"
+            underline="hover"
+            color="inherit"
+          >
+            rolandoxdev@gmail.com
+          </Link>
+        </Typography>
       </Typography>
 
       <Grid container justifyContent="center" spacing={2}>
-        {["home", "projects", "contact"].map((section, index) => (
-          <Grid item key={index}>
-            <Link
-              href={`#${section}`}
-              underline="hover"
-              color="inherit"
-              sx={{ fontSize: "1rem" }}
-            >
-              <Typography sx={{ mt: 3 }} variant="body1">
-                {t(section)}
-              </Typography>
-            </Link>
-          </Grid>
-        ))}
+        {["home", "projects", "certifications", "contact"].map(
+          (section, index) => (
+            <Grid item key={index}>
+              <Link
+                href={`#${section}`}
+                underline="hover"
+                color="inherit"
+                sx={{ fontSize: "1rem" }}
+              >
+                <Typography sx={{ mt: 3 }} variant="body1">
+                  {t(section)}
+                </Typography>
+              </Link>
+            </Grid>
+          )
+        )}
       </Grid>
 
       <Box sx={{ mt: 3 }}>
@@ -73,17 +86,6 @@ const Footer = () => {
         <Typography variant="body2">
           &copy; {new Date().getFullYear()} Rolando Orellana -{" "}
           {t("all_rights_reserved")}
-        </Typography>
-        <Typography variant="body2" sx={{ mt: 1 }}>
-          <MailOutlineIcon sx={{ mr: 1, verticalAlign: "middle" }} />{" "}
-          {t("contact_info")}:{" "}
-          <Link
-            href="mailto:rolando.orellana@example.com"
-            underline="hover"
-            color="inherit"
-          >
-            rolandoxdev@gmail.com
-          </Link>
         </Typography>
       </Box>
     </Box>

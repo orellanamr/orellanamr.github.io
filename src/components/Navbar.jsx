@@ -89,6 +89,13 @@ const Navbar = () => {
             <Button
               color="inherit"
               sx={{ fontWeight: 600 }}
+              onClick={() => handleScrollToSection("certifications")}
+            >
+              {t("certifications")}
+            </Button>
+            <Button
+              color="inherit"
+              sx={{ fontWeight: 600 }}
               onClick={() => handleScrollToSection("contact")}
             >
               {t("contact")}
@@ -169,6 +176,11 @@ const Navbar = () => {
                 </MenuItem>
                 <MenuItem onClick={() => handleScrollToSection("projects")}>
                   <Typography variant="h6">{t("projects")}</Typography>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => handleScrollToSection("certifications")}
+                >
+                  <Typography variant="h6">{t("certifications")}</Typography>
                 </MenuItem>
                 <MenuItem onClick={() => handleScrollToSection("contact")}>
                   <Typography variant="h6">{t("contact")}</Typography>

@@ -26,7 +26,6 @@ const AboutMe = () => {
             sx={{
               width: { xs: 225, md: 225, lg: 300 },
               height: { xs: 180, md: 180, lg: 250 },
-              //mx: "auto",
               borderRadius: "150px",
               border: "10px solid #ddf247",
               overflow: "hidden",
@@ -53,8 +52,8 @@ const AboutMe = () => {
             fontWeight="bold"
             gutterBottom
             textAlign="left"
+            color="#000000"
             sx={{
-              //mx: "auto",
               fontSize: { xs: "2rem", md: "2.5rem" },
               textAlign: { xs: "left", md: "left" },
             }}

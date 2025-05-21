@@ -77,8 +77,8 @@ const TechStack = () => (
                 src={tech.logo}
                 alt={tech.name}
                 sx={{
-                  width: { xs: 32, md: 45, lg: 52 },
-                  height: { xs: 32, md: 45, lg: 52 },
+                  width: { xs: 32, md: 45, lg: 45 },
+                  height: { xs: 32, md: 45, lg: 45 },
                   marginBottom: 1,
                 }}
               />

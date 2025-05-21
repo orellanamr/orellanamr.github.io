@@ -10,6 +10,7 @@ import {
 import { useTranslation } from "react-i18next";
 import byteCode from "../assets/images/byteCode_landing.jpg";
 import Reco from "../assets/images/reco_desktop.jpg";
+import RecoApp from "../assets/images/RecoApp_RolandoOrellana_Developer.jpg";
 import portfolioRolando from "../assets/images/portfolio_Rolando.jpg";
 import byteCode_logo from "../assets/images/byteCode_logo.svg";
 import Reco_logo from "../assets/images/reco_logo.svg";
@@ -26,7 +27,7 @@ import focusTimeCover from "../assets/images/FocusTimeApp.png";
 const projects = [
   {
     id: 1,
-    title: "Reco",
+    title: "Reco Web",
     description: "Reco_description",
     repoLink:
       "https://github.com/andrea-calderon/Web_App_Chispudos/tree/development",
@@ -41,6 +42,20 @@ const projects = [
   },
   {
     id: 2,
+    title: "Reco APP",
+    description: "RecoApp_description",
+    repoLink: "https://github.com/orellanamr/reco-app",
+    liveLink: "",
+    image: RecoApp,
+    logo: Reco_logo,
+    technologies: [
+      { name: "React Native", logo: reactLogo },
+      { name: "Redux", logo: reduxLogo },
+      { name: "Expo", logo: expoLogo },
+    ],
+  },
+  {
+    id: 3,
     title: "Focus Time",
     description: "FocusTime_description",
     repoLink: "https://github.com/orellanamr/focusTime",
@@ -54,7 +69,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "byteCode",
     description: "byteCode_description",
     repoLink: "https://github.com/orellanamr/bytecode_landing",
@@ -68,7 +83,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Portfolio",
     description: "Portfolio_description",
     repoLink: "https://github.com/orellanamr/orellanamr.github.io",

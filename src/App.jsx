@@ -3,7 +3,9 @@ import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
+import Certifications from "./components/Certifications";
 import Footer from "./components/Footer";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 const App = () => {
   return (
@@ -21,9 +23,13 @@ const App = () => {
       <div id="projects">
         <Projects />
       </div>
+      <div id="certifications">
+        <Certifications />
+      </div>
       <div id="contact">
         <Footer />
       </div>
+      <WhatsAppFloat />
     </div>
   );
 };

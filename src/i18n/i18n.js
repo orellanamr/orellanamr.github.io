@@ -5,80 +5,97 @@ import LanguageDetector from "i18next-browser-languagedetector";
 const resources = {
   en: {
     translation: {
-      home: "Home",
-      about: "About",
-      about_me_title: "Hey there!",
-      about_me_description:
-        "I'm a frontend developer with 1.5+ years of experience building secure, high-performance web and mobile apps using React and React Native. I focus on clean UX, scalable code, and API integration. I also bring hands-on experience in manual testing, including API testing with Postman and exploratory testing. I thrive in agile teams and follow Git-based workflows.",
-      projects: "Projects",
-      contact: "Contact",
-      download_cv: "Download CV",
-      all_rights_reserved: "All rights reserved",
-      contact_info: "Contact",
+      // Hero Section
       hero: {
         name: "Rolando Orellana",
         title: {
+          creative: "Creativity",
           developer: "Developer",
-          innovative: "Innovative",
-          creative: "Creative",
-          passionate: "Passionate",
+          innovative: "Innovation",
+          passionate: "Strategy",
         },
         description:
-          "Frontend developer with 1.5+ years of experience in web and mobile apps using React & React Native, plus 6+ years in design and digital marketing.",
+          "Frontend Developer with a rare blend of coding, design, and business strategy. 1.5+ years of experience in web and mobile apps using React & React Native, plus 6+ years in design and digital marketing.",
         scrollDown: "Scroll Down",
       },
-      Projects: "Projects",
+
+      // General
+      about: "About",
+      about_me_description:
+        "I’m not just a frontend developer—I’m a designer with over 6 years of experience and a business-minded thinker. This means I approach problems with creativity, code with purpose, and build interfaces that are not only beautiful, but usable and strategic. I bring value to teams that want more than execution—they want someone who understands users, product, and goals.",
+      about_me_title: "Why hire me?",
+      all_rights_reserved: "All rights reserved",
+      contact: "Contact",
+      contact_info: "Contact",
+      download_cv: "Download CV",
+      home: "Home",
+      live_preview: "Live preview",
+      projects: "Projects",
+      certifications: "Certifications",
+      view_certificate: "View Certificate",
+      view_repo: "View Repo",
+      whatsapp_cta: "Let's Connect!",
+
+      // Projects Section
       projects_subtitle:
-        "Creating products that serve consumers and their needs.",
+        "Delivering impactful products tailored to real-world needs.",
       byteCode_description:
         "byteCode is a modern landing page built with React.js and Material UI. Designed to attract and convert users, it showcases a dynamic and responsive design.",
       Reco_description:
         "Reco, developed in React.js with Redux and RTK Query, connects users with verified professionals. Its atomic design ensures scalability and a seamless experience.",
+      RecoApp_description:
+        "Built with React Native, Expo, Redux, and RTK Query, connects users with verified professionals. Its atomic design ensures scalability and a seamless experience.",
       FocusTime_description:
         "FocusTime is a productivity app built with React Native and Expo. The app is cross-platform, leveraging hooks for state management and Git for version control.",
       Portfolio_description:
         "This portfolio was built with React.js, Vite, and Material UI, it features a modern, responsive design and smooth animations.",
-      view_repo: "View Repo",
-      live_preview: "Live preview",
     },
   },
   es: {
     translation: {
-      home: "Inicio",
-      about: "Acerca",
-      about_me_title: "¡Hola!",
-      about_me_description:
-        "Soy desarrollador frontend con más de 1.5 años de experiencia creando aplicaciones web y móviles seguras y de alto rendimiento con React y React Native. Me enfoco en la experiencia de usuario, código escalable e integración de APIs. También tengo experiencia práctica en testing manual, incluyendo pruebas con Postman y testing exploratorio. Me adapto bien a equipos ágiles y trabajo con flujos basados en Git.",
-      projects: "Proyectos",
-      contact: "Contacto",
-      download_cv: "Descargar CV",
-      all_rights_reserved: "Todos los derechos reservados",
-      contact_info: "Contacto",
+      // Hero Section
       hero: {
         name: "Rolando Orellana",
         title: {
-          developer: "Desarrollador",
-          innovative: "Innovador",
-          creative: "Creativo",
+          creative: "Creatividad",
+          developer: "Developer",
+          innovative: "Innovación",
           passionate: "Apasionado",
         },
         description:
-          "Desarrollador frontend con más de 1.5 años de experiencia en aplicaciones web y móviles con React & React Native, y más de 6 años en diseño y marketing digital.",
+          "Desarrollador Frontend con una rara mezcla de codificación, diseño y estrategia de negocio. Más de 1,5 años de experiencia en aplicaciones web y móviles con React y React Native, además de más de 6 años en diseño y marketing digital.",
         scrollDown: "Deslizar hacia abajo",
       },
-      Projects: "Proyectos",
+      // General
+      about: "Acerca",
+      about_me_description:
+        "No soy solo un desarrollador frontend: también soy diseñador con más de 6 años de experiencia y tengo una mentalidad estratégica gracias a mi formación en negocios (MBA). Esto me permite abordar los proyectos con creatividad, programar con propósito y construir interfaces que no solo son atractivas, sino también usables y estratégicas. Aporto valor a equipos que buscan más que ejecución: buscan alguien que entienda al usuario, el producto y los objetivos.",
+      about_me_title: "¿Por qué contratarme?",
+      all_rights_reserved: "Todos los derechos reservados",
+      contact: "Contacto",
+      contact_info: "Contacto",
+      download_cv: "Descargar CV",
+      home: "Inicio",
+      live_preview: "Vista previa",
+      projects: "Proyectos",
+      certifications: "Certificaciones",
+      view_certificate: "Ver certificado",
+      view_repo: "Ver Repositorio",
+      whatsapp_cta: "¡Hablemos!",
+
+      // Projects Section
       projects_subtitle:
-        "Creando productos que sirven a los consumidores y sus necesidades.",
+        "Transformando ideas en productos funcionales y centrados en el usuario.",
       byteCode_description:
         "byteCode es una página de aterrizaje moderna construida con React.js y Material UI. Diseñada para atraer y convertir usuarios, muestra un diseño dinámico y responsivo.",
       Reco_description:
         "Desarrollada en React.js con Redux y RTK Query, conecta usuarios con profesionales verificados. Su diseño atómico garantiza escalabilidad y fluidez.",
+      RecoApp_description:
+        "Reco APP, desarrollada en React Native con Expo, Redux y RTK Query, conecta usuarios con profesionales verificados. Su diseño atómico garantiza escalabilidad y una experiencia fluida.",
       FocusTime_description:
         "FocusTime es una app de productividad construida con React Native y Expo. Es multiplataforma y emplea hooks para el estado y Git para el control de versiones.",
       Portfolio_description:
         "Este portafolio fue construido con React.js, Vite y Material UI, cuenta con un diseño moderno, responsivo y animaciones fluidas.",
-      view_repo: "Ver Repositorio",
-      live_preview: "Vista previa",
     },
   },
 };
