@@ -45,7 +45,7 @@ const projects = [
     title: "Reco APP",
     description: "RecoApp_description",
     repoLink: "https://github.com/orellanamr/reco-app",
-    liveLink: "",
+    liveLink: "https://play.google.com/store/apps/details?id=gt.com.reco.app",
     image: RecoApp,
     logo: Reco_logo,
     technologies: [

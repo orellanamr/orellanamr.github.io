@@ -13,6 +13,7 @@ import platziLogo from "../assets/images/logos/platzi.svg";
 import ztmLogo from "../assets/images/logos/ZTM.png";
 import languageLogo from "../assets/images/logos/language.svg";
 import universityLogo from "../assets/images/logos/university.svg";
+import figmaLogo from "../assets/images/logos/figma.svg";
 
 const certifications = [
   // 1. Certificaciones técnicas recientes y relevantes
@@ -71,6 +72,20 @@ const certifications = [
     logo: platziLogo,
     link: "https://platzi.com/p/orellana.marketing/curso/3208-course/diploma/detalle/",
     year: "2024",
+  },
+  {
+    title: "Figma UI/UX Design Essentials",
+    issuer: "SKILLSHARE",
+    logo: figmaLogo,
+    link: "https://www.skillshare.com/en/classes/figma-ui-ux-design-essentials/1088693386?srsltid=AfmBOoq20sAV6pWF2C_nfylug9500SDXzbmF0DjVfRWfKBjlcBXT6zVC",
+    year: "2023",
+  },
+  {
+    title: "Fundamentals of UX/UI Interface Design",
+    issuer: "Platzi",
+    logo: figmaLogo,
+    link: "https://platzi.com/p/orellana.marketing/curso/5184-basico-ui/diploma/detalle/",
+    year: "2023",
   },
 
   // 2. Certificaciones en progreso
