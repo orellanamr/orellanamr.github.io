@@ -1,6 +1,8 @@
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import profilePic from "../assets/images/profileRolandoOrellana.png";
+import RolandoCV from "../assets/docs/Rolando_Orellana_CV.pdf";
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 
 const AboutMe = () => {
   const { t } = useTranslation();
@@ -72,6 +74,28 @@ const AboutMe = () => {
           >
             {t("about_me_description")}
           </Typography>
+          <Button
+            variant="contained"
+            color="primary"
+            size="medium"
+            fullWidth
+            startIcon={<DescriptionOutlinedIcon />}
+            href={RolandoCV}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              mt: 2,
+              maxWidth: { xs: 400, sm: 300, md: 300, lg: 300 },
+              backgroundColor: "#EFEFEF",
+              color: "black",
+              "&:hover": {
+                backgroundColor: "#ddf247",
+                color: "black",
+              },
+            }}
+          >
+            {t("download_cv")}
+          </Button>
         </Grid>
       </Grid>
     </Box>
